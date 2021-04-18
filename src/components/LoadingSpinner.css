@@ -1,0 +1,50 @@
+@keyframes wiggle {
+  0% {
+    transform: translateY(50%);
+  }
+  35% {
+    transform: translateY(100%);
+  }
+  70% {
+    transform: translateY(50%);
+  }
+  100% {
+    transform: translateY(50%);
+  }
+}
+.loading-block-container {
+  display: flex;
+  height: 30px;
+  justify-content: center;
+  margin: 1em;
+}
+.loading-block:nth-child(1) {
+  transform: translateY(50%);
+  margin: 2px;
+  border-radius: 3px;
+  width: 10px;
+  height: 10px;
+  background: #444;
+  animation: wiggle 1.2s infinite;
+  animation-delay: 200ms;
+}
+.loading-block:nth-child(2) {
+  transform: translateY(50%);
+  margin: 2px;
+  border-radius: 3px;
+  width: 10px;
+  height: 10px;
+  background: #444;
+  animation: wiggle 1.2s infinite;
+  animation-delay: 400ms;
+}
+.loading-block:nth-child(3) {
+  transform: translateY(50%);
+  margin: 2px;
+  border-radius: 3px;
+  width: 10px;
+  height: 10px;
+  background: #444;
+  animation: wiggle 1.2s infinite;
+  animation-delay: 600ms;
+}
