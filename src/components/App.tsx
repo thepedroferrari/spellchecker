@@ -5,6 +5,7 @@ import SpellingFixer from "./SpellingFixer"
 
 const App = () => {
   const [text, setText] = React.useState("")
+
   return (
     <div className="App">
       <CollectInput onSubmit={setText} />

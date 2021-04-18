@@ -1,9 +1,8 @@
 import axios from "axios"
-import React from "react"
 import { act } from "react-dom/test-utils"
 import { mount } from "enzyme"
 import mockResponses from "../mock_responses/mock-responses"
-import SpellingFixer from "../src/components/SpellingFixer"
+import SpellingFixer from "../components/SpellingFixer"
 
 jest.mock("axios")
 const mockAxios = axios as jest.Mocked<typeof axios>

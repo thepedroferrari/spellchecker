@@ -1,16 +1,13 @@
 module.exports = {
-  verbose: false,
-  preset: "ts-jest",
-  testEnvironment: "jsdom",
-  reporters: [["jest-reporter", {}]],
-  globals: {
-    "ts-jest": {
-      packageJson: "<rootDir>/package.json",
-    },
+  roots: ["<rootDir>/src"],
+  testMatch: [
+    "**/__tests__/**/*.+(ts|tsx|js)",
+    "**/?(*.)+(spec|test).+(ts|tsx|js)",
+  ],
+  transform: {
+    "^.+\\.(ts|tsx)$": "ts-jest",
   },
-  setupFilesAfterEnv: ["<rootDir>/set-up-enzyme.ts"],
-  moduleNameMapper: {
-    "\\.(css|less|sass|scss)$": "<rootDir>/__mocks__/styleMock.ts",
-    "\\.(gif|ttf|eot|svg)$": "<rootDir>/__mocks__/fileMock.ts",
-  },
+
+  snapshotSerializers: ["enzyme-to-json/serializer"],
+  setupFilesAfterEnv: ["<rootDir>/src/setupEnzyme.ts"],
 }
